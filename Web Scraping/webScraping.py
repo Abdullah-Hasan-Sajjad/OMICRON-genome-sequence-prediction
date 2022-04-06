@@ -27,6 +27,6 @@ ActionChains(driver).send_keys(Keys.ENTER).perform()
 driver.find_element(By.XPATH,"//div[@class='sys-actionbar-action-ni'][2]").click()
 
 # Putting search values
-driver.find_element(By.ID,"ce_r9lyrr_as_entry").send_keys("Asia / Bangladesh / Dhaka")
-driver.find_element(By.ID,"ce_r9lyrr_b1_select").send_keys("VOC Omicron GRA (B.1.1.529+BA.*) first detected in Botswana/Hong Kong/South Africa")
-driver.find_element(By.ID,"ce_r9lyrr_at_entry").send_keys("Human")
+driver.find_element(By.ID,"ce_r9rpf1_9t_entry").send_keys("Asia / Bangladesh / Dhaka")
+driver.find_element(By.ID,"ce_r9rpf1_a2_select").send_keys("VOC Omicron GRA (B.1.1.529+BA.*) first detected in Botswana/Hong Kong/South Africa")
+driver.find_element(By.ID,"ce_r9rpf1_9u_entry").send_keys("Human")

@@ -1,3 +1,4 @@
+import time
 from    selenium    import  webdriver
 #from   selenium.webdriver.edge.options import  Options
 from    selenium.webdriver.common.action_chains import  ActionChains
@@ -27,6 +28,20 @@ ActionChains(driver).send_keys(Keys.ENTER).perform()
 driver.find_element(By.XPATH,"//div[@class='sys-actionbar-action-ni'][2]").click()
 
 # Putting search values
-driver.find_element(By.ID,"ce_r9lyrr_as_entry").send_keys("Asia / Bangladesh / Dhaka")
-driver.find_element(By.ID,"ce_r9lyrr_b1_select").send_keys("VOC Omicron GRA (B.1.1.529+BA.*) first detected in Botswana/Hong Kong/South Africa")
-driver.find_element(By.ID,"ce_r9lyrr_at_entry").send_keys("Human")
+driver.find_element(By.ID,"ce_r9uykk_hw_entry").send_keys("Asia / Bangladesh / Dhaka")
+driver.find_element(By.ID,"ce_r9uykk_i5_select").send_keys("VOC Omicron GRA (B.1.1.529+BA.*) first detected in Botswana/Hong Kong/South Africa")
+driver.find_element(By.ID,"ce_r9uykk_hx_entry").send_keys("Human")
+
+
+time.sleep(4)
+position=0+1
+xpath="//tbody[@class='yui-dt-data']/tr["+str(position)+"]"
+driver.find_element(By.XPATH,xpath).click()
+
+time.sleep(4)
+driver.switch_to.frame(driver.find_element(By.XPATH, "//iframe[@src='about:blank']"))
+time.sleep(4)
+fasta=driver.find_element(By.XPATH, "//pre").text
+
+time.sleep(3)
+driver.find_element(By.XPATH, "//button[@class='sys-event-hook sys-form-button']").click()
